@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'screens/mainscree.dart';
+
+// import 'screens/main_screen.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Link Detector',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      home: const MainScreen(),
+    );
+  }
+}
